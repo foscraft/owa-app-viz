@@ -6,7 +6,7 @@ import {HexagonLayer} from '@deck.gl/aggregation-layers';
 import DeckGL from '@deck.gl/react';    
 
 // Source data CSV
-const DATA_URL = './data/ke_gbif_500k_locations.csv';
+const DATA_URL = './data/ke_gbif_1m_locations.csv';
   //'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv'; // eslint-disable-line
 
 const ambientLight = new AmbientLight({
@@ -69,7 +69,7 @@ function getTooltip({object}) {
   return `\
     latitude: ${Number.isFinite(lat) ? lat.toFixed(6) : ''}
     longitude: ${Number.isFinite(lng) ? lng.toFixed(6) : ''}
-    ${count} Accidents`;
+    ${count} Occurrences`;
 }
 
 /* eslint-disable react/no-deprecated */
